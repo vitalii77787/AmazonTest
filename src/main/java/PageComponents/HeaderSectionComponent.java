@@ -20,11 +20,12 @@ public class HeaderSectionComponent {
     }
 
     protected List<WebElement> AuthorElements() {
-        return parent.findElements(By.cssSelector(".sg-col-inner>.a-section.a-spacing-none>.a-row.a-size-base.a-color-secondary>a"));
+        return parent.findElements(
+                By.cssSelector(".sg-col-inner>.a-section.a-spacing-none>.a-row.a-size-base.a-color-secondary>a"));
     }
 
     protected List<WebElement> RatingElement() {
-        return parent.findElements(By.cssSelector(".sg-col-inner>div:nth-of-type(2) .a-popover-trigger a-declarative>i>span"));
+        return parent.findElements(By.cssSelector(".sg-col-inner>div:nth-of-type(2) .a-popover-trigger>i>span"));
     }
 
     public String GetBookName() {
@@ -41,7 +42,7 @@ public class HeaderSectionComponent {
 
     public double GetRating() {
         double rating = 0.0;
-        if (this.RatingElement().size() > 0) {
+        if (!this.RatingElement().isEmpty()) {
             String[] ratings = this.RatingElement().get(0).getText().split(" ");
             return TryParseDouble(ratings[0], rating);
         }
