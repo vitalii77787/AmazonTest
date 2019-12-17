@@ -18,52 +18,52 @@ public class AmazonHomePage extends BasePage {
         super(_driver);
     }
 
-    protected WebElement InputField() {
+    protected WebElement inputField() {
         return this.driver.findElement(By.cssSelector("#twotabsearchtextbox"));
     }
 
-    protected WebElement SelectButton() {
-        return DriverFindElementWithWait(By.cssSelector("#nav-search-dropdown-card>.nav-search-scope.nav-sprite"));
+    protected WebElement selectButton() {
+        return driverFindElementWithWait(By.cssSelector("#nav-search-dropdown-card>.nav-search-scope.nav-sprite"));
     }
 
-    protected WebElement SelectElement() {
-        return DriverFindElementWithWait(By.cssSelector(FilterSelector));
+    protected WebElement selectElement() {
+        return driverFindElementWithWait(By.cssSelector(FilterSelector));
     }
 
-    protected WebElement SearchButton() {
+    protected WebElement searchButton() {
         return this.driver.findElement(By.cssSelector("#nav-search .nav-right .nav-input"));
     }
 
-    protected void SetFilterOptionWithJs(String selector, String option) {
+    protected void setFilterOptionWithJs(String selector, String option) {
         String script = String.format("document.querySelector('%s')." +
-	    "selectedIndex = [...document.querySelector('%s').options]" +
-        ".findIndex (option => option.text === '%s');", selector, selector, option);
-        ExecuteScript(script);
+                "selectedIndex = [...document.querySelector('%s').options]" +
+                ".findIndex (option => option.text === '%s');", selector, selector, option);
+        executeScript(script);
     }
 
-    public void SetFilterOptionProgrammatically (String option) {
-        SetFilterOptionWithJs(FilterSelector, option);
+    public void setFilterOptionProgrammatically(String option) {
+        setFilterOptionWithJs(FilterSelector, option);
     }
 
     public void FillInputAndClickEnter(String inputText) {
-        PageObjectHelper.FillInputAndClickEnterKey(InputField(), inputText);
+        PageObjectHelper.fillInputAndClickEnterKey(inputField(), inputText);
     }
 
     public void FillInput(String inputText) {
-        PageObjectHelper.FillInput(InputField(), inputText);
+        PageObjectHelper.fillInput(inputField(), inputText);
     }
 
     public void FillInputAndClickSearchButton(String inputText) {
-        PageObjectHelper.FillInput(InputField(), inputText);
-        SearchButton().click();
+        PageObjectHelper.fillInput(inputField(), inputText);
+        searchButton().click();
     }
 
     public void ClickOnSearchButton() {
-        this.SearchButton().click();
+        this.searchButton().click();
     }
 
     // Not working code
-    // public void SelectItemFromSelectElement(String item) {
+    // public void selectItemFromSelectElement(String item) {
     //     SelectButton().click();
     //     Select filterSelect = new Select(SelectElement());
     //     filterSelect.selectByVisibleText(item); 

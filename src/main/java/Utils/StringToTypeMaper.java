@@ -2,13 +2,18 @@ package Utils;
 
 public class StringToTypeMaper {
     public static BrowserTypes mapParameter(String param) {
-        switch (param) {
-            case "chrome" :
-                return BrowserTypes.Chrome;
-            case "firefox" :
-                return BrowserTypes.FireFox;
+        BrowserTypes browserType = BrowserTypes.FireFox;
+        switch (param == null ? "" : param) {
+            case "chrome":
+                browserType = BrowserTypes.Chrome;
+                break;
+            case "firefox":
+                browserType = BrowserTypes.FireFox;
+                break;
             default:
-                return  BrowserTypes.FireFox;
+                browserType = BrowserTypes.FireFox;
+                break;
         }
+        return browserType;
     }
 }

@@ -19,26 +19,26 @@ public class AmazonResultsPage extends BasePage {
     }
 
 
-    protected List<WebElement> SearchResultElements() {
-        return DriverFindElementsWithWait(By.cssSelector(".s-result-list.s-search-results.sg-row>.sg-col-20-of-24"));
+    protected List<WebElement> searchResultElements() {
+        return driverFindElementsWithWait(By.cssSelector(".s-result-list.s-search-results.sg-row>.sg-col-20-of-24"));
     }
 
-    protected List<SearchResultComponent> GetSearchResults() {
+    protected List<SearchResultComponent> getSearchResults() {
         List<SearchResultComponent> searchResultsList = new ArrayList<SearchResultComponent>();
-        for (WebElement item : SearchResultElements()) {
+        for (WebElement item : searchResultElements()) {
             searchResultsList.add(new SearchResultComponent(item));
         }
         return searchResultsList;
     }
 
-    public int GetResultsCount() {
-        return GetSearchResults().size();
+    public int getResultsCount() {
+        return getSearchResults().size();
     }
 
-    public List<BookModel> GetBooks () {
+    public List<BookModel> getBooks () {
         List<BookModel> books = new ArrayList<>();
-        for (SearchResultComponent item : GetSearchResults()){
-            books.add(item.GetBookModel());
+        for (SearchResultComponent item : getSearchResults()){
+            books.add(item.getBookModel());
         }
         return books;
     }

@@ -10,37 +10,37 @@ public class DriverFactory {
     public DriverFactory() {
     }
 
-    public WebDriver GetDriver() {
+    public WebDriver getDriver() {
         if (driver == null) {
             throw new NullPointerException("The WebDriver browser instance was not initialized.");
         }
         return driver;
     }
 
-    public WebDriverWait GetDriverWait() {
+    public WebDriverWait getDriverWait() {
         if (driver == null || driverWait == null) {
             throw new NullPointerException("The WebDriver browser instance was not initialized.");
         }
         return driverWait;
     }
 
-    public void StartBrowser(BrowserTypes browserType, int defaultTimeOut) {
+    public void startBrowser(BrowserTypes browserType, int defaultTimeOut) {
         switch (browserType) {
             case Chrome:
-                driver = BuildWebDriver.BuildChromeDriver();
+                driver = BuildWebDriver.buildChromeDriver();
                 break;
             case FireFox:
-                driver = BuildWebDriver.BuildFirefoxDriver();
+                driver = BuildWebDriver.buildFirefoxDriver();
                 break;
             default:
-                driver = BuildWebDriver.BuildChromeDriver();
+                driver = BuildWebDriver.buildChromeDriver();
                 break;
         }
         driver.manage().window().maximize();
         driverWait = new WebDriverWait(driver, defaultTimeOut);
     }
 
-    public void StopDriver() {
+    public void stopDriver() {
         driver.quit();
         driver = null;
         driverWait = null;

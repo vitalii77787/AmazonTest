@@ -24,15 +24,15 @@ public abstract class BasePage {
         this.driverWait = new WebDriverWait(driver, defaultTimeout);
     }
 
-    protected WebElement DriverFindElementWithWait(By by) {
+    protected WebElement driverFindElementWithWait(By by) {
         return driverWait.until(ExpectedConditions.elementToBeClickable(by));
     }
 
-    protected List<WebElement> DriverFindElementsWithWait(By by) {
+    protected List<WebElement> driverFindElementsWithWait(By by) {
         return driverWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
     }
 
-    protected void ExecuteScript(String script) {
+    protected void executeScript(String script) {
         JavascriptExecutor.class.cast(this.driver).executeScript(script);
     }
 }

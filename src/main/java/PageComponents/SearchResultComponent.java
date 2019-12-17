@@ -11,29 +11,29 @@ public class SearchResultComponent {
         this.parent = parent;
     }
 
-    protected WebElement BageElement() {
+    protected WebElement bageElement() {
         return parent.findElement(By.cssSelector(".a-section.a-spacing-medium>.sg-row:first-of-type"));
     }
 
-    protected WebElement InfoSectionElement() {
+    protected WebElement infoSectionElement() {
         return parent.findElement(By.cssSelector(".a-section.a-spacing-medium>.sg-row>div:nth-of-type(2)>.sg-col-inner"));
     }
 
-    protected BageSectionComponent GetBage() {
-        return new BageSectionComponent(this.BageElement());
+    protected BageSectionComponent getBage() {
+        return new BageSectionComponent(this.bageElement());
     }
 
-    protected InfoSectionComponent GetInfo() {
-        return new InfoSectionComponent(this.InfoSectionElement());
+    protected InfoSectionComponent getInfo() {
+        return new InfoSectionComponent(this.infoSectionElement());
     }
 
-    public BookModel GetBookModel() {
+    public BookModel getBookModel() {
         BookModel book = new BookModel();
-        book.setAuthor(GetInfo().GetAuthor());
-        book.setBookName(GetInfo().GetName());
-        book.setPrice(GetInfo().GetPrice());
-        book.setRating(GetInfo().GetRating());
-        book.setBestSeller(GetBage().IsBestSeller());
+        book.setAuthor(getInfo().getAuthor());
+        book.setBookName(getInfo().getName());
+        book.setPrice(getInfo().getPrice());
+        book.setRating(getInfo().getRating());
+        book.setBestSeller(getBage().isBestSeller());
         return book;
     }
 }

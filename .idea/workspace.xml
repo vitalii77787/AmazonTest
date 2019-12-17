@@ -3,7 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="4ba03758-bdad-4f91-a184-0cb3465c016b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageComponents/BageSectionComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageComponents/BageSectionComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageComponents/HeaderSectionComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageComponents/HeaderSectionComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageComponents/InfoSectionComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageComponents/InfoSectionComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageComponents/PriceSectionComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageComponents/PriceSectionComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageComponents/SearchResultComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageComponents/SearchResultComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/AmazonHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/AmazonHomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/AmazonResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/AmazonResultsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/BuildWebDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/BuildWebDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/DriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/PageObjectHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/PageObjectHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/StringToTypeMaper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/StringToTypeMaper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/AmazonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AmazonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Data.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,5 +122,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge branch 'master' of https://github.com/vitalii77787/AmazonTest&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/PageObjects/AmazonHomePage.java" />
     <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/vitalii77787/AmazonTest&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/PageObjects/AmazonHomePage.java" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Utils/StringToTypeMaper.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

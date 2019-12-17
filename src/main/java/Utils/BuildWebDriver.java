@@ -10,17 +10,17 @@ import static io.github.bonigarcia.wdm.DriverManagerType.*;
 
 public class BuildWebDriver {
 
-    public static WebDriver BuildChromeDriver() {
-        WebDriverManager.getInstance(CHROME).setup();;
+    public static WebDriver buildChromeDriver() {
+        WebDriverManager.getInstance(CHROME).setup();
         return new ChromeDriver();
     }
 
-    public static WebDriver BuildFirefoxDriver() {
+    public static WebDriver buildFirefoxDriver() {
         WebDriverManager.getInstance(FIREFOX).setup();
         return new FirefoxDriver();
     }
 
-    public static WebDriver BuildExplorerDriver() {
+    public static WebDriver buildExplorerDriver() {
         WebDriverManager.getInstance(IEXPLORER).setup();
         return new InternetExplorerDriver();
     }

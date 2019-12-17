@@ -3,8 +3,8 @@ package PageComponents;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import static Utils.PageObjectHelper.ClearStringFromSymbols;
-import static Utils.PageObjectHelper.TryParseDouble;
+import static Utils.PageObjectHelper.clearStringFromSymbols;
+import static Utils.PageObjectHelper.tryParseDouble;
 
 public class PriceSectionComponent {
     private WebElement parent;
@@ -13,13 +13,13 @@ public class PriceSectionComponent {
         this.parent = parent;
     }
 
-    protected WebElement PriceElement() {
+    protected WebElement priceElement() {
         return this.parent.findElement(By.cssSelector(".sg-col-inner>div:first-of-type>div:nth-of-type(2)>div>a>span:first-of-type>span:first-of-type"));
     }
 
-    public Double GetPrice() {
+    public Double getPrice() {
         double price = 0.0;
-        String clearedString = ClearStringFromSymbols(this.PriceElement().getText());
-        return TryParseDouble(clearedString, price);
+        String clearedString = clearStringFromSymbols(this.priceElement().getText());
+        return tryParseDouble(clearedString, price);
     }
 }

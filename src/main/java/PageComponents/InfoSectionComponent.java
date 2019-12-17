@@ -20,27 +20,27 @@ public class InfoSectionComponent {
         return parent.findElement(By.cssSelector(".sg-row:nth-of-type(2)"));
     }
 
-    protected PriceSectionComponent GetPriceComponent() {
+    protected PriceSectionComponent getPriceComponent() {
         return new PriceSectionComponent(this.PriceSectionElement());
     }
 
-    protected HeaderSectionComponent GetHeaderSectionComponent() {
+    protected HeaderSectionComponent getHeaderSectionComponent() {
         return new HeaderSectionComponent(this.HeaderSectionElement());
     }
 
-    public double GetPrice() {
-        return GetPriceComponent().GetPrice();
+    public double getPrice() {
+        return getPriceComponent().getPrice();
     }
 
-    public String GetName() {
-        return GetHeaderSectionComponent().GetBookName();
+    public String getName() {
+        return getHeaderSectionComponent().getBookName();
     }
 
-    public List<String> GetAuthor() {
-        return GetHeaderSectionComponent().GetAuthors();
+    public List<String> getAuthor() {
+        return getHeaderSectionComponent().getAuthors();
     }
 
-    public double GetRating() {
-        return GetHeaderSectionComponent().GetRating();
+    public double getRating() {
+        return getHeaderSectionComponent().getRating();
     }
 }

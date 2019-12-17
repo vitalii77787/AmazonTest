@@ -1,8 +1,6 @@
 import Models.BookModel;
-import PageComponents.SearchResultComponent;
 import PageObjects.AmazonHomePage;
 import PageObjects.AmazonResultsPage;
-import Utils.BrowserTypes;
 import Utils.DriverFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -22,34 +20,34 @@ public class AmazonTest {
     public void SetUp() {
         driverFactory = new DriverFactory();
         String browserName = System.getProperty("browser");
-        driverFactory.StartBrowser(mapParameter(browserName), timeOut);
-        driverFactory.GetDriver().navigate().to(Data.BaseUrl);
+        driverFactory.startBrowser(mapParameter(browserName), timeOut);
+        driverFactory.getDriver().navigate().to(Data.BASEURL);
     }
 
     @Test
-    public void VerifyingAmazonSearchResultsPAge()  {
+    public void verifyingAmazonSearchResultsPAge() {
         // Arrange
-        String desiredBook = Data.TestBook;
+        String desiredBook = Data.TEST_BOOK;
         boolean expectedResult = true;
 
         // Act
-        boolean actual = IsBookInSearchResults(desiredBook, FillingInputAndApplyingFilter(Data.TestData1, Data.FilterOption));
+        boolean actual = isBookInSearchResults(desiredBook, fillingInputAndApplyingFilter(Data.TESTDATA_FOR_INPUT_SEARCH, Data.FILTER_OPTION));
 
-        // Accert
+        // Assert
         Assert.assertEquals(expectedResult, actual);
     }
 
-    private  AmazonResultsPage FillingInputAndApplyingFilter(String inputValue, String filterValue) {
-        AmazonHomePage homePage = new AmazonHomePage(driverFactory.GetDriver(), driverFactory.GetDriverWait());
+    private AmazonResultsPage fillingInputAndApplyingFilter(String inputValue, String filterValue) {
+        AmazonHomePage homePage = new AmazonHomePage(driverFactory.getDriver(), driverFactory.getDriverWait());
         homePage.FillInput(inputValue);
-        homePage.SetFilterOptionProgrammatically(filterValue);
+        homePage.setFilterOptionProgrammatically(filterValue);
         homePage.ClickOnSearchButton();
-        return new AmazonResultsPage(driverFactory.GetDriver(), driverFactory.GetDriverWait());
+        return new AmazonResultsPage(driverFactory.getDriver(), driverFactory.getDriverWait());
     }
 
-    private boolean IsBookInSearchResults(String bookName, AmazonResultsPage resultsPage) {
+    private boolean isBookInSearchResults(String bookName, AmazonResultsPage resultsPage) {
         boolean result = false;
-        List <BookModel> results = resultsPage.GetBooks();
+        List<BookModel> results = resultsPage.getBooks();
         for (BookModel item : results) {
             if (item.getBookName().equals(bookName)) {
                 result = true;
@@ -58,9 +56,9 @@ public class AmazonTest {
         }
         return result;
     }
-    
+
     @AfterClass
     public void TierDown() {
-        driverFactory.StopDriver();
+        driverFactory.stopDriver();
     }
 }

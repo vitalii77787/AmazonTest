@@ -7,20 +7,20 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class PageObjectHelper {
-    public static void FillInput(WebElement target, String inputText) {
+    public static void fillInput(WebElement target, String inputText) {
         target.click();
         target.clear();
         target.sendKeys(inputText);
     }
 
-    public static void FillInputAndClickEnterKey(WebElement target, String inputText) {
+    public static void fillInputAndClickEnterKey(WebElement target, String inputText) {
         target.click();
         target.clear();
         target.sendKeys(inputText);
         target.sendKeys(Keys.ENTER);
     }
 
-    public static Double TryParseDouble(String value, double defaultValue) {
+    public static Double tryParseDouble(String value, double defaultValue) {
         try {
             return Double.parseDouble(value);
         } catch (NumberFormatException e) {
@@ -28,7 +28,7 @@ public class PageObjectHelper {
         }
     }
 
-    public static String ClearStringFromSymbols(String value) {
+    public static String clearStringFromSymbols(String value) {
         final String regex = "[^\\d.,]+";
         final String string = value;
         final String substring = "";
