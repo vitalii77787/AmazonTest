@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4ba03758-bdad-4f91-a184-0cb3465c016b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/BookModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/BookModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageComponents/BageSectionComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageComponents/BageSectionComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageComponents/InfoSectionComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageComponents/InfoSectionComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageComponents/SearchResultComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageComponents/SearchResultComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/AmazonHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/AmazonHomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/AmazonResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/AmazonResultsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/AmazonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AmazonTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Data.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

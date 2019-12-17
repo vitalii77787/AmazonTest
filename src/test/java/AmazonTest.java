@@ -11,6 +11,8 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
+import static Utils.StringToTypeMaper.mapParameter;
+
 
 public class AmazonTest {
     private DriverFactory driverFactory;
@@ -19,7 +21,8 @@ public class AmazonTest {
     @BeforeClass
     public void SetUp() {
         driverFactory = new DriverFactory();
-        driverFactory.StartBrowser(BrowserTypes.Chrome, timeOut);
+        String browserName = System.getProperty("browser");
+        driverFactory.StartBrowser(mapParameter(browserName), timeOut);
         driverFactory.GetDriver().navigate().to(Data.BaseUrl);
     }
 
