@@ -1,5 +1,6 @@
 package Models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BookModel {
@@ -8,20 +9,21 @@ public class BookModel {
     private double price;
     private double rating;
     private boolean isBestSeller;
-    private String bookLink;
 
     public BookModel(String bookName,
                      List<String> author,
                      double price,
                      double rating,
-                     boolean isBestSeller,
-                     String bookLink) {
+                     boolean isBestSeller) {
         this.bookName = bookName;
         this.author = author;
         this.price = price;
         this.rating = rating;
         this.isBestSeller = isBestSeller;
-        this.bookLink = bookLink;
+    }
+
+    public BookModel() {
+        author = new ArrayList<>();
     }
 
     public String getBookName() {
@@ -44,10 +46,6 @@ public class BookModel {
         return isBestSeller;
     }
 
-    public String getBookLink() {
-        return bookLink;
-    }
-
     public void setBookName(String bookName) {
         this.bookName = bookName;
     }
@@ -68,7 +66,4 @@ public class BookModel {
         isBestSeller = bestSeller;
     }
 
-    public void setBookLink(String bookLink) {
-        this.bookLink = bookLink;
-    }
 }

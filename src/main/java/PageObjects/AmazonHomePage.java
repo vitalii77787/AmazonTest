@@ -62,7 +62,7 @@ public class AmazonHomePage extends BasePage {
         this.SearchButton().click();
     }
 
-    // Not worked code
+    // Not working code
     // public void SelectItemFromSelectElement(String item) {
     //     SelectButton().click();
     //     Select filterSelect = new Select(SelectElement());

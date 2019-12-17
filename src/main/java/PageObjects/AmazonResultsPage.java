@@ -1,13 +1,13 @@
 package PageObjects;
 
+import Models.BookModel;
 import PageComponents.SearchResultComponent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class AmazonResultsPage extends BasePage {
     public AmazonResultsPage(WebDriver _driver, WebDriverWait _wait) {
@@ -33,5 +33,13 @@ public class AmazonResultsPage extends BasePage {
 
     public int GetResultsCount() {
         return GetSearchResults().size();
+    }
+
+    public List<BookModel> GetBooks () {
+        List<BookModel> books = new ArrayList<>();
+        for (SearchResultComponent item : GetSearchResults()){
+            books.add(item.GetBookModel());
+        }
+        return books;
     }
 }

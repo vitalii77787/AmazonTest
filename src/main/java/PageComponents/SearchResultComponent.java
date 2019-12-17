@@ -1,5 +1,6 @@
 package PageComponents;
 
+import Models.BookModel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -18,11 +19,21 @@ public class SearchResultComponent {
         return parent.findElement(By.cssSelector(".a-section.a-spacing-medium>.sg-row>div:nth-of-type(2)>.sg-col-inner"));
     }
 
-    public BageSectionComponent GetBage() {
+    protected BageSectionComponent GetBage() {
         return new BageSectionComponent(this.BageElement());
     }
 
-    public InfoSectionComponent GetInfo() {
+    protected InfoSectionComponent GetInfo() {
         return new InfoSectionComponent(this.InfoSectionElement());
+    }
+
+    public BookModel GetBookModel() {
+        BookModel book = new BookModel();
+        book.setAuthor(GetInfo().GetAuthor());
+        book.setBookName(GetInfo().GetName());
+        book.setPrice(GetInfo().GetPrice());
+        book.setRating(GetInfo().GetRating());
+        book.setBestSeller(GetBage().IsBestSeller());
+        return book;
     }
 }
