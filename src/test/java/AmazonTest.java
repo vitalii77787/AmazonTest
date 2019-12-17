@@ -23,9 +23,8 @@ public class AmazonTest {
     public void VerifyingAmazonSearchResultsPAge()  {
         AmazonHomePage homePage = new AmazonHomePage(driverFactory.GetDriver(), driverFactory.GetDriverWait());
         homePage.FillInput(Data.TestData1);
-        homePage.SelectItemFromSelectElement(Data.FilterOption);
-        homePage.ClickOnSearchButton();
     }
+    
     @AfterClass
     public void TierDown() {
         driverFactory.StopDriver();

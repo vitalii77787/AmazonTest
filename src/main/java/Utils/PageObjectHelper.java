@@ -3,6 +3,9 @@ package Utils;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class PageObjectHelper {
     public static void FillInput(WebElement target, String inputText) {
         target.click();
@@ -25,7 +28,15 @@ public class PageObjectHelper {
         }
     }
 
-    public static String ClearStringFromSymbols (String value) {
-        return value.replaceAll("[^A-Za-z0-9]","");
+    public static String ClearStringFromSymbols(String value) {
+        final String regex = "[^\\d.,]+";
+        final String string = value;
+        final String substring = "";
+
+        final Pattern pattern = Pattern.compile(regex, Pattern.MULTILINE);
+        final Matcher matcher = pattern.matcher(string);
+
+        final String result = matcher.replaceAll(substring);
+        return result;
     }
 }
