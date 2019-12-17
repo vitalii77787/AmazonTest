@@ -1,6 +1,8 @@
 import PageObjects.AmazonHomePage;
+import PageObjects.AmazonResultsPage;
 import Utils.BrowserTypes;
 import Utils.DriverFactory;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -18,7 +20,7 @@ public class AmazonTest {
     }
 
     @Test
-    public void VerifyingAmazonSearchResultsPAge() throws InterruptedException {
+    public void VerifyingAmazonSearchResultsPAge()  {
         AmazonHomePage homePage = new AmazonHomePage(driverFactory.GetDriver(), driverFactory.GetDriverWait());
         homePage.FillInput(Data.TestData1);
         homePage.SelectItemFromSelectElement(Data.FilterOption);

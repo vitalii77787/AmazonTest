@@ -30,4 +30,8 @@ public class AmazonResultsPage extends BasePage {
         }
         return searchResultsList;
     }
+
+    public int GetResultsCount() {
+        return GetSearchResults().size();
+    }
 }

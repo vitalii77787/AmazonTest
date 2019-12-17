@@ -20,12 +20,16 @@ public class AmazonHomePage extends BasePage {
         return this.driver.findElement(By.cssSelector("#twotabsearchtextbox"));
     }
 
+    protected WebElement LabelField() {
+        return this.driver.findElement(By.cssSelector("#nav-search-dropdown-card>div>div>span"));
+    }
+
     protected WebElement SelectButton() {
         return DriverFindElementWithWait(By.cssSelector("#nav-search-dropdown-card>.nav-search-scope.nav-sprite"));
     }
 
     protected WebElement SelectElement() {
-        return DriverFindElementWithWait(By.cssSelector("select"));
+        return this.driver.findElement(By.cssSelector("#searchDropdownBox"));
     }
 
     protected WebElement SearchButton() {
