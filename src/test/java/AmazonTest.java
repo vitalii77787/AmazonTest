@@ -19,7 +19,7 @@ public class AmazonTest {
     @BeforeClass
     public void SetUp() {
         driverFactory = new DriverFactory();
-        String browserName = System.getProperty("browser");
+         String browserName = System.getProperty("browser");
         driverFactory.startBrowser(mapParameter(browserName), timeOut);
         driverFactory.getDriver().navigate().to(Data.BASEURL);
     }
