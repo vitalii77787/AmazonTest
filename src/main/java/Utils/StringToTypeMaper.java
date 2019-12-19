@@ -11,7 +11,7 @@ public class StringToTypeMaper {
                 browserType = BrowserTypes.FireFox;
                 break;
             default:
-                browserType = BrowserTypes.FireFox;
+                browserType = BrowserTypes.Chrome;
                 break;
         }
         return browserType;
